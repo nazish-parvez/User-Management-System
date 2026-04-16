@@ -16,7 +16,7 @@ app.use(cors()); // Allows frontend (React) to talk to backend
 
 // Simple test route
 app.get("/", (req, res) => {
-  res.send("API is running...");
+  res.send("Human API is running...");
 });
 
 app.use("/api/auth", authRoutes);
