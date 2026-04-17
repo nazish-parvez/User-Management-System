@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-// Create schema (structure of user data)
+
 const userSchema = new mongoose.Schema(
   {
     name: {
@@ -44,10 +44,9 @@ const userSchema = new mongoose.Schema(
     },
   },
   {
-    timestamps: true, // automatically adds createdAt & updatedAt
+    timestamps: true, 
   }
 );
 
-// Export model
 const User = mongoose.model("User", userSchema);
 export default User;

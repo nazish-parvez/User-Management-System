@@ -1,7 +1,7 @@
 import User from "../models/User.js";
 import bcrypt from "bcryptjs";
 
-// 🔹 CREATE USER (Admin)
+
 export const createUser = async (req, res) => {
   try {
     const { name, email, password, role } = req.body;

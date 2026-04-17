@@ -132,7 +132,7 @@ function Users() {
                 key={u._id}
                 className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-3 px-4 py-3 border-b hover:bg-gray-50"
               >
-                <div className="break-words">
+                <div className="space-y-1">
                   <p className="font-semibold">{u.name}</p>
                   <p className="text-sm text-gray-500">{u.email}</p>
                 </div>

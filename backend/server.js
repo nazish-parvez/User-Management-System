@@ -1,22 +1,22 @@
-import express from "express"; // import express framework
-import dotenv from "dotenv"; // load environment variables
-import mongoose from "mongoose"; // MongoDB connection
-import cors from "cors"; // allow frontend requests
+import express from "express";
+import dotenv from "dotenv";
+import mongoose from "mongoose"; 
+import cors from "cors"; 
 
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
 
-dotenv.config(); // read .env file
+dotenv.config(); 
 
-const app = express(); // create server
+const app = express(); 
 
-app.use(express.json()); // This allows us to read JSON data from requests
+app.use(express.json()); 
 
-app.use(cors()); // Allows frontend (React) to talk to backend
+app.use(cors()); 
 
 // Simple test route
 app.get("/", (req, res) => {
-  res.send("Human API is running...");
+  res.send("Human Being. NP is API is running...");
 });
 
 app.use("/api/auth", authRoutes);
