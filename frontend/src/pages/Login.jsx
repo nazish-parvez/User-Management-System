@@ -24,31 +24,31 @@ function Login() {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
-      <form onSubmit={handleLogin} className="bg-white p-6 shadow w-80">
-        <h2 className="text-xl mb-4 font-bold text-center">Login</h2>
+    <div className="flex justify-center items-center h-screen bg-[#222]">
+      <form onSubmit={handleLogin} className="bg-white p-8 w-90 rounded-xl">
+        <h2 className="text-2xl mb-6 font-bold text-center">Login</h2>
 
         <input
           type="email"
           placeholder="Email"
-          className="border p-2 w-full mb-3"
+          className="border p-2 w-full mb-3 rounded-md"
           onChange={(e) => setEmail(e.target.value)}
         />
 
         <input
           type="password"
           placeholder="Password"
-          className="border p-2 w-full mb-4"
+          className="border p-2 w-full mb-4 rounded-md"
           onChange={(e) => setPassword(e.target.value)}
         />
 
-        <button className="bg-blue-500 text-white w-full p-2 rounded">
+        <button className="bg-purple-900 text-white w-full p-2.5 rounded-md hover:bg-purple-800 cursor-pointer">
           Login
         </button>
-        <p className="text-sm mt-3 text-center">
+        <p className="text-sm mt-4 text-center">
           Don't have an account?{" "}
           <span
-            className="text-blue-500 cursor-pointer"
+            className="text-purple-900 cursor-pointer"
             onClick={() => navigate("/register")}
           >
             Register

@@ -37,14 +37,13 @@ function Dashboard() {
     <>
       <Navbar />
 
-      <div className="p-6 bg-gray-100 min-h-screen">
-        <h1 className="text-2xl font-bold mb-6">Dashboard</h1>
+      <div className="p-6 bg-[#222] min-h-screen">
+        <h1 className="text-3xl font-bold mb-8 text-white">Dashboard</h1>
 
         {user && (
-          <div className="bg-white p-6 rounded-xl shadow max-w-md space-y-3">
-            
+          <div className="bg-white p-5 rounded-md shadow max-w-md space-y-2">
             {/* NAME */}
-            <div>
+            <div className="flex gap-1">
               <p className="font-semibold">Name:</p>
 
               {!isEditing ? (
@@ -58,14 +57,18 @@ function Dashboard() {
               )}
             </div>
 
-            <p><b>Email:</b> {user.email}</p>
-            <p><b>Role:</b> {user.role}</p>
+            <p>
+              <b>Email:</b> {user.email}
+            </p>
+            <p>
+              <b>Role:</b> {user.role}
+            </p>
 
             {/* USER UPDATE */}
             {!isEditing ? (
               <button
                 onClick={() => setIsEditing(true)}
-                className="mt-3 bg-blue-500 text-white px-4 py-2 rounded"
+                className="mt-3 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-800 cursor-pointer"
               >
                 Update Name
               </button>
@@ -73,7 +76,7 @@ function Dashboard() {
               <div className="flex gap-2 mt-3">
                 <button
                   onClick={handleUpdate}
-                  className="bg-green-500 text-white px-4 py-2 rounded"
+                  className="bg-green-500 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-green-600"
                 >
                   Save
                 </button>
@@ -83,7 +86,7 @@ function Dashboard() {
                     setIsEditing(false);
                     setNewName(user.name);
                   }}
-                  className="bg-gray-400 text-white px-4 py-2 rounded"
+                  className="bg-gray-400 text-white px-4 py-2 rounded-md cursor-pointer hover:bg-gray-600"
                 >
                   Cancel
                 </button>
@@ -94,7 +97,7 @@ function Dashboard() {
             {user.role === "admin" && (
               <button
                 onClick={() => navigate("/users")}
-                className="mt-4 bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600"
+                className="mt-4 bg-purple-500 text-white px-4 py-2 ml-2.5 rounded hover:bg-purple-600"
               >
                 Show All Users
               </button>
